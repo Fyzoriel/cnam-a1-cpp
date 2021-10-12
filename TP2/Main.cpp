@@ -1,6 +1,6 @@
 /**
  * The main file
- * @file Main,cpp
+ * @file Main.cpp
  * @author Fyzoriel
  * @date 2021/10/11
  */

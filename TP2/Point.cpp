@@ -1,7 +1,9 @@
-//
-// Created by Fyzoriel on 11/10/2021.
-//
-
+/**
+ * Point structure
+ * @file Point.cpp
+ * @author Fyzoriel
+ * @date 2021/10/11
+ */
 #include <cmath>
 #include "Point.h"
 
