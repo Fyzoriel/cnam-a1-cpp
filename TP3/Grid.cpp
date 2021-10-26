@@ -133,7 +133,6 @@ bool Grid::isDiagonalComplete(const Player &player)
             int lineCounter = 0;
             for (int i = 0; i < m_tokenInLine; i++)
             {
-                std::cout << y << " " << x << " " << i << std::endl;
                 if (m_grid[y - i][x + i].getValue() == color)
                 {
                     lineCounter++;
@@ -161,7 +160,6 @@ bool Grid::isDiagonalComplete(const Player &player)
         for (int x = m_columns-1; x >= m_columns-m_tokenInLine; x--)
         {
             int cellNumber = 0;
-            std::cout << y << " " << x << std::endl;
             for (int i = 0; i < m_tokenInLine; i++)
             {
                 if (m_grid[y - i][x - i].getValue() == color)
