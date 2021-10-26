@@ -51,9 +51,9 @@ bool Grid::isEmptyCell(int x, int y)
 
 bool Grid::isFull()
 {
-    for (int y = 0; y < m_columns-1; y++)
+    for (int y = 0; y < m_lines; y++)
     {
-        for (int x = 0; x < m_lines-1; x++)
+        for (int x = 0; x < m_columns; x++)
         {
             if (m_grid[y][x].isEmpty())
             {
@@ -93,7 +93,7 @@ bool Grid::isColumnComplete(int column, const Player &player)
 {
 
     int lineCounter = 0;
-    for (int y = m_lines-1; y > 0; y--)
+    for (int y = m_lines-1; y >= 0; y--)
     {
         if (m_grid[y][column].getValue() == player.getColor())
         {
