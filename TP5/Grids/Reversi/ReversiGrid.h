@@ -1,21 +1,20 @@
 //
-// Created by Fyzoriel on 10/11/2021.
+// Created by ben on 21/11/2021.
 //
 
-#ifndef TP5_REVERSIGRID_H
-#define TP5_REVERSIGRID_H
+#include <Grids/Grid.h>
 
+#ifndef TP3_REVERSIGRID_H
+#define TP3_REVERSIGRID_H
 
-#include "Grids/Grid.h"
+#endif //TP3_REVERSIGRID_H
 
 class ReversiGrid : public Grid
 {
 public:
     ReversiGrid();
 
+    bool checkToken(const Player &player, int x, int y);
     void addToken(const Player &player) override;
-    bool isWinner(const Player &player) override;
+
 };
-
-
-#endif //TP5_REVERSIGRID_H
