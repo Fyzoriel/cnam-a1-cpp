@@ -14,6 +14,6 @@ void Cell::addToken(const Player &player)
     value = player.getColor();
 }
 
-char Cell::getValue() {
+char Cell::getColor() {
     return value;
 }

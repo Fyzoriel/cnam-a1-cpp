@@ -14,7 +14,7 @@ class Cell
 public:
     bool isEmpty() const;
     void addToken(const Player &player);
-    char getValue();
+    char getColor();
 
 private:
     char value = ' ';
