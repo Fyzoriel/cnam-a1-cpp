@@ -3,19 +3,20 @@
 //
 
 #include "Player.h"
-#include "Cell.h"
-#include "Grid.h"
+#include "Cell/Cell.h"
+#include "Grids/Grid.h"
+#include "Grids/GridLine.h"
 
 #ifndef TP3_CONNECT4GRID_H
 #define TP3_CONNECT4GRID_H
 
 #endif //TP3_CONNECT4GRID_H
 
-class Connect4Grid : public Grid
+class Connect4Grid : public GridLine
 {
 
 public:
     Connect4Grid();
 
-    bool addToken(const Player &player, int x, int y) override;
+    void addToken(const Player &player) override;
 };

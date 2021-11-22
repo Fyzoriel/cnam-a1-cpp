@@ -9,17 +9,19 @@
 #define TP3_TICTACTOEGRID_H
 
 #include <vector>
+#include <Game.h>
 #include "Player.h"
-#include "Cell.h"
-#include "Grid.h"
+#include "Cell/Cell.h"
+#include "Grids/Grid.h"
+#include "Grids/GridLine.h"
 
-class TicTacToeGrid : public Grid
+class TicTacToeGrid : public GridLine
 {
 
 public:
     TicTacToeGrid();
 
-    bool addToken(const Player &player, int x, int y) override;
+    void addToken(const Player &player) override;
 };
 
 

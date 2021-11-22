@@ -4,28 +4,28 @@
 
 #ifndef TP3_GAME_H
 #define TP3_GAME_H
-#include "TicTacToeGrid.h"
+
+#include <Grids/Grid.h>
 
 class Game
 {
 public:
 
-    explicit Game(Grid* grid);
+    explicit Game(Grid& grid);
 
     void start();
 
 private:
     Player m_players[2] = {};
-    Grid* m_grid;
+    Grid& m_grid;
     int m_playerTurn = 0;
 
     void restart();
-    int askNumber();
     void changePlayer();
 
-    void addToken(const Player &player);
-
     Player playingPlayer();
+
+    void addToken(const Player &player);
 };
 
 
