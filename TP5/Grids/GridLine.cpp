@@ -2,14 +2,16 @@
 // Created by Fyzoriel on 10/11/2021.
 //
 
-#include <iostream>
 #include "GridLine.h"
 
-GridLine::GridLine(int x, int y, int tokenInLine) : Grid(x, y), m_tokenInLine(tokenInLine)
-{
+GridLine::GridLine(int x, int y, int tokenInLine) : Grid(x, y), m_tokenInLine(tokenInLine){}
 
-}
-
+/**
+ * Check if a line has been complete by a player according to the number of cells in row needed
+ * @param line The number of the line to check
+ * @param player The player we want to check if he has complete the line
+ * @return true if line is completed
+ */
 bool GridLine::isLineComplete(int line, const Player &player)
 {
     int lineCounter = 0;
@@ -32,6 +34,12 @@ bool GridLine::isLineComplete(int line, const Player &player)
     return false;
 }
 
+/**
+ * Check if a column has been complete by a player according to the number of cells in row needed
+ * @param column The number of the column to check
+ * @param player The player we want to check if he has complete the column
+ * @return true if column is completed
+ */
 bool GridLine::isColumnComplete(int column, const Player &player)
 {
 
@@ -56,6 +64,11 @@ bool GridLine::isColumnComplete(int column, const Player &player)
     return false;
 }
 
+/**
+ * Check if at least one diagonal has been complete by a player according to the number of cells in row needed
+ * @param player The player we want to check if he has complete the column
+ * @return true if at least one diagonal is completed
+ */
 bool GridLine::isDiagonalComplete(const Player &player)
 {
     const char color = player.getColor();
@@ -97,7 +110,6 @@ bool GridLine::isDiagonalComplete(const Player &player)
     // y limit = line size - 2
     // x = max c size - 1
     // x limit = max c size - line size
-
     for (int y = m_lines-1; y > m_lines-2; y--)
     {
         for (int x = m_columns-1; x >= m_columns-m_tokenInLine; x--)
@@ -120,7 +132,11 @@ bool GridLine::isDiagonalComplete(const Player &player)
     return false;
 }
 
-
+/**
+ * Check if a player is the winner
+ * @param player The player we want to check the win
+ * @return true if player is the winner
+ */
 bool GridLine::isWinner(const Player &player)
 {
     for (int i = 0; i < m_columns; i++)

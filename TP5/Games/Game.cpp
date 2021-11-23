@@ -11,7 +11,9 @@ Game::Game()
     m_players[1] = Player('O');
     m_playerTurn = 0;
 }
-
+/**
+ * Ask for restart the game
+ */
 void Game::restart()
 {
     char ask;
@@ -28,11 +30,18 @@ void Game::restart()
     }
 }
 
+/**
+ * Get the playing player
+ * @return the playing player
+ */
 Player Game::playingPlayer()
 {
     return m_players[m_playerTurn];
 }
 
+/**
+ * Change the playing player
+ */
 void Game::changePlayer()
 {
     m_playerTurn = (m_playerTurn + 1) % 2;

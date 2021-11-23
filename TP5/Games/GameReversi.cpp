@@ -7,6 +7,9 @@
 
 GameReversi::GameReversi() : m_grid(ReversiGrid()){}
 
+/**
+ * Start reversi game
+ */
 void GameReversi::start()
 {
     m_grid.setColors(m_players[0].getColor(), m_players[1].getColor());

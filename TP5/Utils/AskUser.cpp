@@ -16,7 +16,7 @@ int AskUser::askNumber(int max)
         retry = std::cin.fail() || ask < 1 || ask > max;
         if (retry)
         {
-            std::cout << std::endl << "You have to enter a valid number: " << std::endl;
+            std::cout << "You have to enter a valid number: " << std::endl;
         }
     } while (retry);
 

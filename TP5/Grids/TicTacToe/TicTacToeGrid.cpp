@@ -6,11 +6,12 @@
 #include "Cell/Cell.h"
 #include "Utils/AskUser.h"
 
-TicTacToeGrid::TicTacToeGrid() : GridLine(3, 3, 3)
-{
+TicTacToeGrid::TicTacToeGrid() : GridLine(3, 3, 3){}
 
-}
-
+/**
+ * Add token to the Tic Tac Toe grid
+ * @param player The player who add the token
+ */
 void TicTacToeGrid::addToken(const Player &player)
 {
     int x, y;

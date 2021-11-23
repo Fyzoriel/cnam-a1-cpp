@@ -4,10 +4,10 @@
 
 #include "Player.h"
 
-/* Public methods */
-Player::Player() : Player('E') {}
+Player::Player() : Player('D') {}
 Player::Player(char color): m_color(color) {}
 
-char Player::getColor() const {
+char Player::getColor() const
+{
     return m_color;
 }

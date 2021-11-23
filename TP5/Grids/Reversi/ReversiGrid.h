@@ -20,8 +20,6 @@ public:
 
     bool checkFlipToken(const Player& player, int x, int y, bool flipMode);
 
-    bool isWinner(const Player& player) override;
-
     bool canPlay(const Player& player);
 
     void setColors(char color1, char color2);

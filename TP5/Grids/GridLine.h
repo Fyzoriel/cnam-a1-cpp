@@ -17,7 +17,7 @@ public:
 
     void addToken(const Player &player) override = 0;
 
-    bool isWinner(const Player &player) override;
+    bool isWinner(const Player &player);
 
 private:
     const int m_tokenInLine;

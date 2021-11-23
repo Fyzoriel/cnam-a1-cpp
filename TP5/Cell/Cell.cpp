@@ -4,6 +4,10 @@
 
 #include "Cell.h"
 
+/**
+ * Check if cell is empty
+ * @return true if cell is empty
+ */
 bool Cell::isEmpty() const
 {
     return value == ' ';
@@ -14,6 +18,7 @@ void Cell::setColor(char color)
     value = color;
 }
 
-char Cell::getColor() {
+char Cell::getColor() const
+{
     return value;
 }

@@ -5,9 +5,12 @@
 #include "Connect4Grid.h"
 #include "Utils/AskUser.h"
 
-/* Public methods */
 Connect4Grid::Connect4Grid() : GridLine(4,7,4){}
 
+/**
+ * Add token to the connect 4 grid
+ * @param player The player who add the token
+ */
 void Connect4Grid::addToken(const Player &player)
 {
     bool isCorrectPos = false;
@@ -26,5 +29,3 @@ void Connect4Grid::addToken(const Player &player)
         }
     } while (!isCorrectPos);
 }
-
-/* Private methods */

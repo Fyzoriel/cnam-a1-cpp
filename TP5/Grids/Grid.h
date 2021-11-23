@@ -18,8 +18,6 @@ public:
 
     virtual void addToken(const Player &player) = 0;
 
-    virtual bool isWinner(const Player &player) = 0;
-
     void displayGrid();
 
     bool isEmptyCell(int x, int y);

@@ -14,7 +14,7 @@ class Cell
 public:
     bool isEmpty() const;
     void setColor(char color);
-    char getColor();
+    char getColor() const;
 
 private:
     char value = ' ';

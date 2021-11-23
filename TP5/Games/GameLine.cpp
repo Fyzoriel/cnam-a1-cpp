@@ -7,7 +7,9 @@
 
 GameLine::GameLine(GridLine& m_grid) : m_grid(m_grid) {}
 
-
+/**
+ * Start game line type
+ */
 void GameLine::start()
 {
     m_grid.initArray();
