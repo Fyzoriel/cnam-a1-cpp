@@ -21,6 +21,7 @@ void Connect4Grid::addToken(const Player &player)
             {
                 m_grid[y][x].setColor(player.getColor());
                 isCorrectPos = true;
+                break;
             }
         }
     } while (!isCorrectPos);

@@ -3,7 +3,6 @@
 
 #include "Games/GameLine.h"
 #include "Grids/TicTacToe/TicTacToeGrid.h"
-#include "Games/Game.h"
 #include "Grids/Connect4/Connect4Grid.h"
 #include "Grids/Reversi/ReversiGrid.h"
 
