@@ -4,6 +4,12 @@
 
 #include <iostream>
 #include "AskUser.h"
+
+/**
+ * Ask number input
+ * @param max The maximal number
+ * @return The inputted number
+ */
 int AskUser::askNumber(int max)
 {
     int ask;
