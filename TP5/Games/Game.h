@@ -11,21 +11,17 @@ class Game
 {
 public:
 
-    explicit Game(Grid& grid);
+    Game();
+    virtual void start() = 0;
 
-    void start();
-
-private:
+protected:
     Player m_players[2] = {};
-    Grid& m_grid;
-    int m_playerTurn = 0;
+    int m_playerTurn;
 
     void restart();
     void changePlayer();
 
     Player playingPlayer();
-
-    void addToken(const Player &player);
 };
 
 

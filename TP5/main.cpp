@@ -1,6 +1,9 @@
 #include <iostream>
+#include <Games/GameReversi.h>
+
+#include "Games/GameLine.h"
 #include "Grids/TicTacToe/TicTacToeGrid.h"
-#include "Game.h"
+#include "Games/Game.h"
 #include "Grids/Connect4/Connect4Grid.h"
 #include "Grids/Reversi/ReversiGrid.h"
 
@@ -18,17 +21,19 @@ int main()
     if(choice == 1)
     {
         TicTacToeGrid grid = TicTacToeGrid();
-        Game game = Game(grid);
+        GameLine game = GameLine(grid);
+        game.start();
     }
     else if(choice == 2)
     {
         Connect4Grid grid = Connect4Grid();
-        Game game = Game(grid);
+        GameLine game = GameLine(grid);
+        game.start();
     }
     else if(choice == 3)
     {
-        ReversiGrid grid = ReversiGrid();
-        Game game = Game(grid);
+        GameReversi game = GameReversi();
+        game.start();
     }
 
     std::cout << "Au revoir !" << std::endl;

@@ -9,7 +9,7 @@
 #define TP3_TICTACTOEGRID_H
 
 #include <vector>
-#include "Game.h"
+#include "Games/Game.h"
 #include "Player.h"
 #include "Cell/Cell.h"
 #include "Grids/Grid.h"

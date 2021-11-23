@@ -10,12 +10,12 @@ add_executable(TP5
         Cell/Cell.h
         Grids/Connect4/Connect4Grid.cpp
         Grids/Connect4/Connect4Grid.h
-        Game.cpp
-        Game.h
+        Games/Game.cpp
+        Games/Game.h
         Grids/Grid.cpp
         Grids/Grid.h
         main.cpp
         Player.cpp
         Player.h
         Grids/TicTacToe/TicTacToeGrid.cpp
-        Grids/TicTacToe/TicTacToeGrid.h Grids/GridLine.cpp Grids/GridLine.h Utils/AskUser.cpp Utils/AskUser.h Grids/Reversi/ReversiGrid.cpp)
+        Grids/TicTacToe/TicTacToeGrid.h Grids/GridLine.cpp Grids/GridLine.h Utils/AskUser.cpp Utils/AskUser.h Grids/Reversi/ReversiGrid.cpp Games/GameLine.cpp Games/GameLine.h Games/GameReversi.cpp Games/GameReversi.h)

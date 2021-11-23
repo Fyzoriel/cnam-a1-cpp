@@ -7,8 +7,6 @@
 #ifndef TP3_REVERSIGRID_H
 #define TP3_REVERSIGRID_H
 
-#endif //TP3_REVERSIGRID_H
-
 class ReversiGrid : public Grid
 {
 public:
@@ -16,12 +14,21 @@ public:
 
     void initArray() override;
 
-    // bool checkToken(const Player &player, int x, int y);
-    void addToken(const Player &player) override;
+    void addToken(const Player& player) override;
 
-    bool flipToken(const Player &player, int x, int y, int xModifier, int yModifier, bool first);
+    bool checkFlipToken(const Player& player, int x, int y, int xModifier, int yModifier, bool first, bool flipMode);
 
-    bool flipToken(const Player &player, int x, int y);
+    bool checkFlipToken(const Player& player, int x, int y, bool flipMode);
 
-    bool isWinner(const Player &player) override;
+    bool isWinner(const Player& player) override;
+
+    bool canPlay(const Player& player);
+
+    void setColors(char color1, char color2);
+
+    void getScores(int& scorePlayer1, int& scorePlayer2, int& scoreNeutral);
+private:
+    char m_colorPlayer1;
+    char m_colorPlayer2;
 };
+#endif //TP3_REVERSIGRID_H
