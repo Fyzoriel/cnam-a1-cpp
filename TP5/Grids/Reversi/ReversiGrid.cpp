@@ -90,7 +90,7 @@ bool ReversiGrid::flipToken(const Player &player, int x, int y, int xModifier, i
     bool canFlip = flipToken(player, nextX, nextY, xModifier, yModifier, false);
     if (canFlip)
     {
-        m_grid[y][x].setColor(player.getColor());
+        m_grid[nextY][nextX].setColor(player.getColor());
     }
     return canFlip;
 }
