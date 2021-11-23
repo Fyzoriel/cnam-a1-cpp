@@ -19,7 +19,7 @@ void Connect4Grid::addToken(const Player &player)
         {
             if (isEmptyCell(x, y))
             {
-                m_grid[y][x].addToken(player);
+                m_grid[y][x].setColor(player.getColor());
                 isCorrectPos = true;
             }
         }

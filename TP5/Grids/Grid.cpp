@@ -13,19 +13,28 @@ Grid::Grid(int lines, int columns) : m_lines(lines), m_columns(columns)
 
 void Grid::displayGrid()
 {
+    char separator = '|';
+    std::cout << "   " << separator << " ";
+    for (int x = 0; x < m_columns; x++)
+    {
+        std::cout << x+1 << " " << separator << " ";
+    }
+        std::cout << std::endl;
+
     for (int y = 0; y < m_lines; y++)
     {
+        std::cout << " " << y+1;
         for (int x = 0; x < m_columns; x++)
         {
-            std::cout << "| " << m_grid[y][x].getValue() << " ";
+            std::cout << " " << separator << " " << m_grid[y][x].getColor();
         }
-        std::cout << "|" << std::endl;
+        std::cout << " " << separator << std::endl;
     }
 }
 
 bool Grid::isEmptyCell(int x, int y)
 {
-    return m_grid[y][x].getValue() == ' ';
+    return m_grid[y][x].getColor() == ' ';
 }
 
 bool Grid::isFull()
@@ -43,6 +52,7 @@ bool Grid::isFull()
     return true;
 }
 
-void Grid::initArray() {
+void Grid::initArray()
+{
     m_grid = std::vector<std::vector<Cell>>(m_lines, std::vector<Cell>(m_columns, Cell()));
 }

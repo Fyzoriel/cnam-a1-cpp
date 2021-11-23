@@ -18,4 +18,4 @@ add_executable(TP5
         Player.cpp
         Player.h
         Grids/TicTacToe/TicTacToeGrid.cpp
-        Grids/TicTacToe/TicTacToeGrid.h Grids/GridLine.cpp Grids/GridLine.h Utils/AskUser.cpp Utils/AskUser.h)
+        Grids/TicTacToe/TicTacToeGrid.h Grids/GridLine.cpp Grids/GridLine.h Utils/AskUser.cpp Utils/AskUser.h Grids/Reversi/ReversiGrid.cpp)

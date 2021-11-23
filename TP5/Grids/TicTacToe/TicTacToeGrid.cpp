@@ -4,7 +4,7 @@
 
 #include "TicTacToeGrid.h"
 #include "Cell/Cell.h"
-#include "utils/AskUser.h"
+#include "Utils/AskUser.h"
 
 TicTacToeGrid::TicTacToeGrid() : GridLine(3, 3, 3)
 {
@@ -21,5 +21,5 @@ void TicTacToeGrid::addToken(const Player &player)
         y = AskUser::askNumber(m_lines);
     } while (!isEmptyCell(x, y));
 
-    m_grid[y][x].addToken(player);
+    m_grid[y][x].setColor(player.getColor());
 }

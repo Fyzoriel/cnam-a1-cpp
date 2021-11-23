@@ -13,7 +13,7 @@ class Cell
 
 public:
     bool isEmpty() const;
-    void addToken(const Player &player);
+    void setColor(char color);
     char getColor();
 
 private:

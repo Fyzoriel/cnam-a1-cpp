@@ -24,7 +24,8 @@ public:
 
     bool isEmptyCell(int x, int y);
     bool isFull();
-    void initArray();
+
+    virtual void initArray();
 
 protected:
     std::vector<std::vector<Cell>> m_grid;

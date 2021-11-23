@@ -15,7 +15,7 @@ bool GridLine::isLineComplete(int line, const Player &player)
     int lineCounter = 0;
     for (int x = 0; x < m_columns; x++)
     {
-        if (m_grid[line][x].getValue() == player.getColor())
+        if (m_grid[line][x].getColor() == player.getColor())
         {
             lineCounter++;
         }
@@ -38,7 +38,7 @@ bool GridLine::isColumnComplete(int column, const Player &player)
     int lineCounter = 0;
     for (int y = m_lines-1; y >= 0; y--)
     {
-        if (m_grid[y][column].getValue() == player.getColor())
+        if (m_grid[y][column].getColor() == player.getColor())
         {
             lineCounter++;
         }
@@ -76,7 +76,7 @@ bool GridLine::isDiagonalComplete(const Player &player)
             int lineCounter = 0;
             for (int i = 0; i < m_tokenInLine; i++)
             {
-                if (m_grid[y - i][x + i].getValue() == color)
+                if (m_grid[y - i][x + i].getColor() == color)
                 {
                     lineCounter++;
                 }
@@ -105,7 +105,7 @@ bool GridLine::isDiagonalComplete(const Player &player)
             int cellNumber = 0;
             for (int i = 0; i < m_tokenInLine; i++)
             {
-                if (m_grid[y - i][x - i].getValue() == color)
+                if (m_grid[y - i][x - i].getColor() == color)
                 {
                     cellNumber++;
                 }

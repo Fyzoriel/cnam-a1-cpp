@@ -9,9 +9,9 @@ bool Cell::isEmpty() const
     return value == ' ';
 }
 
-void Cell::addToken(const Player &player)
+void Cell::setColor(char color)
 {
-    value = player.getColor();
+    value = color;
 }
 
 char Cell::getColor() {
