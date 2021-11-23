@@ -15,21 +15,21 @@ int main()
         std::cout << "1-TicTacToe" << std::endl << "2-Connect 4" << std::endl << "3-Reversi" << std::endl;
         std::cout << "Veuillez choisir le jeu de votre choix (1, 2 ou 3)" << std::endl;
         choice = AskUser::askNumber(3);
-    } while(choice < 1);
+    } while(choice < 0);
 
-    if(choice == 1)
+    if(choice == 0)
     {
         TicTacToeGrid grid = TicTacToeGrid();
         GameLine game = GameLine(grid);
         game.start();
     }
-    else if(choice == 2)
+    else if(choice == 1)
     {
         Connect4Grid grid = Connect4Grid();
         GameLine game = GameLine(grid);
         game.start();
     }
-    else if(choice == 3)
+    else if(choice == 2)
     {
         GameReversi game = GameReversi();
         game.start();
